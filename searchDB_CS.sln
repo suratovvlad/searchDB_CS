@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "searchDB_CS", "searchDB_CS\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "searchDB_CS_RT_Split", "searchDB_CS_RT_Split\searchDB_CS_RT_Split.csproj", "{69CB3AA6-6B3E-4A9E-85F7-9A1DC9EE661D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "searchDB_CS_GUI", "searchDB_CS_GUI\searchDB_CS_GUI.csproj", "{E0FC908D-DED5-41D7-83B5-3BC7940F1518}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,16 @@ Global
 		{69CB3AA6-6B3E-4A9E-85F7-9A1DC9EE661D}.Release|x86.ActiveCfg = Release|x86
 		{69CB3AA6-6B3E-4A9E-85F7-9A1DC9EE661D}.Release|x86.Build.0 = Release|x86
 		{69CB3AA6-6B3E-4A9E-85F7-9A1DC9EE661D}.Release|x86.Deploy.0 = Release|x86
+		{E0FC908D-DED5-41D7-83B5-3BC7940F1518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0FC908D-DED5-41D7-83B5-3BC7940F1518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0FC908D-DED5-41D7-83B5-3BC7940F1518}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{E0FC908D-DED5-41D7-83B5-3BC7940F1518}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E0FC908D-DED5-41D7-83B5-3BC7940F1518}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E0FC908D-DED5-41D7-83B5-3BC7940F1518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0FC908D-DED5-41D7-83B5-3BC7940F1518}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0FC908D-DED5-41D7-83B5-3BC7940F1518}.Release|ARM.ActiveCfg = Release|Any CPU
+		{E0FC908D-DED5-41D7-83B5-3BC7940F1518}.Release|x64.ActiveCfg = Release|Any CPU
+		{E0FC908D-DED5-41D7-83B5-3BC7940F1518}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
