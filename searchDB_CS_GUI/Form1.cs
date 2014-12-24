@@ -14,6 +14,7 @@ namespace searchDB_CS_GUI
     public partial class SearcherForm : Form
     {
         private List<Document> docs = new List<Document>();
+        private Stemmer stemmer = new Stemmer();
 
         public SearcherForm()
         {
@@ -27,6 +28,7 @@ namespace searchDB_CS_GUI
             DateTextBox.Text = "";
             AuthorTextBox.Text = "";
             ContentTextBox.Text = "";
+            StemmedTextBox.Text = "";
 
             string connetionString = null;
             SqlConnection connection;
@@ -38,7 +40,14 @@ namespace searchDB_CS_GUI
                 toolStripStatusLabel1.Text = "Connection Opened!";
                 docs.Clear();
 
-                String input = SearchBox.Text;
+                String input = SearchBox.Text.ToLower();
+                
+                stemmer.add(input.ToCharArray(), input.Length);
+                stemmer.stem();
+
+                String stemmedWord = stemmer.ToString();
+                StemmedTextBox.Text = stemmedWord;
+
                 SqlCommand command;
                 SqlDataReader reader;
 
@@ -48,10 +57,10 @@ namespace searchDB_CS_GUI
                         LEFT JOIN [dbo].[search_terms] trms ON trms.term_id = wrds.term_id
 					    LEFT JOIN [dbo].[search_Inverted_index] indx ON (indx.term_ID = trms.term_id)
 					    LEFT JOIN [dbo].[search_Documents] docs ON	(indx.Doc_ID = docs.Doc_ID)
-                        WHERE (wrds.word_word = @WORD) OR (wrds.word_stem = @WORD)
+                        WHERE (wrds.word_stem = @WORD)
 					    ;"
                     , connection);
-                command.Parameters.Add(new SqlParameter("WORD", input));
+                command.Parameters.Add(new SqlParameter("WORD", stemmedWord));
 
                 reader = command.ExecuteReader();
                 try
@@ -74,10 +83,10 @@ namespace searchDB_CS_GUI
                         LEFT JOIN [dbo].[search_terms] trms ON trms.term_id = wrds.term_id
 					    LEFT JOIN [dbo].[search_Inverted_index] indx ON (indx.term_ID = trms.term_id)
 					    LEFT JOIN [dbo].[search_Documents] docs ON	(indx.Doc_ID = docs.Doc_ID)
-                        WHERE (wrds.word_word = @WORD) OR (wrds.word_stem = @WORD)
+                        WHERE (wrds.word_stem = @WORD)
 					    ORDER BY indx.probability DESC;"
                     , connection);
-                command.Parameters.Add(new SqlParameter("WORD", input));
+                command.Parameters.Add(new SqlParameter("WORD", stemmedWord));
 
                 
                 reader = command.ExecuteReader();

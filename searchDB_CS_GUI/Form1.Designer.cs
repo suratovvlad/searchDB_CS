@@ -43,6 +43,8 @@
             this.ContentTextBox = new System.Windows.Forms.TextBox();
             this.SearchLabel = new System.Windows.Forms.Label();
             this.SearchResultsLabel = new System.Windows.Forms.Label();
+            this.StemmedLabel = new System.Windows.Forms.Label();
+            this.StemmedTextBox = new System.Windows.Forms.TextBox();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,7 +74,7 @@
             this.SearchResultListView.Location = new System.Drawing.Point(52, 89);
             this.SearchResultListView.MultiSelect = false;
             this.SearchResultListView.Name = "SearchResultListView";
-            this.SearchResultListView.Size = new System.Drawing.Size(325, 267);
+            this.SearchResultListView.Size = new System.Drawing.Size(325, 296);
             this.SearchResultListView.TabIndex = 2;
             this.SearchResultListView.TileSize = new System.Drawing.Size(300, 30);
             this.SearchResultListView.UseCompatibleStateImageBehavior = false;
@@ -98,7 +100,7 @@
             // TitleLabel
             // 
             this.TitleLabel.AutoSize = true;
-            this.TitleLabel.Location = new System.Drawing.Point(401, 40);
+            this.TitleLabel.Location = new System.Drawing.Point(399, 66);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(27, 13);
             this.TitleLabel.TabIndex = 4;
@@ -107,7 +109,7 @@
             // DateLabel
             // 
             this.DateLabel.AutoSize = true;
-            this.DateLabel.Location = new System.Drawing.Point(401, 66);
+            this.DateLabel.Location = new System.Drawing.Point(399, 92);
             this.DateLabel.Name = "DateLabel";
             this.DateLabel.Size = new System.Drawing.Size(30, 13);
             this.DateLabel.TabIndex = 5;
@@ -116,7 +118,7 @@
             // AuthorLabel
             // 
             this.AuthorLabel.AutoSize = true;
-            this.AuthorLabel.Location = new System.Drawing.Point(401, 92);
+            this.AuthorLabel.Location = new System.Drawing.Point(399, 118);
             this.AuthorLabel.Name = "AuthorLabel";
             this.AuthorLabel.Size = new System.Drawing.Size(38, 13);
             this.AuthorLabel.TabIndex = 6;
@@ -125,7 +127,7 @@
             // ContentLabel
             // 
             this.ContentLabel.AutoSize = true;
-            this.ContentLabel.Location = new System.Drawing.Point(401, 119);
+            this.ContentLabel.Location = new System.Drawing.Point(399, 145);
             this.ContentLabel.Name = "ContentLabel";
             this.ContentLabel.Size = new System.Drawing.Size(44, 13);
             this.ContentLabel.TabIndex = 7;
@@ -134,7 +136,7 @@
             // TitleTextBox
             // 
             this.TitleTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TitleTextBox.Location = new System.Drawing.Point(483, 37);
+            this.TitleTextBox.Location = new System.Drawing.Point(481, 66);
             this.TitleTextBox.Name = "TitleTextBox";
             this.TitleTextBox.ReadOnly = true;
             this.TitleTextBox.Size = new System.Drawing.Size(473, 13);
@@ -143,7 +145,7 @@
             // DateTextBox
             // 
             this.DateTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DateTextBox.Location = new System.Drawing.Point(483, 63);
+            this.DateTextBox.Location = new System.Drawing.Point(481, 92);
             this.DateTextBox.Name = "DateTextBox";
             this.DateTextBox.ReadOnly = true;
             this.DateTextBox.Size = new System.Drawing.Size(473, 13);
@@ -152,7 +154,7 @@
             // AuthorTextBox
             // 
             this.AuthorTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AuthorTextBox.Location = new System.Drawing.Point(483, 89);
+            this.AuthorTextBox.Location = new System.Drawing.Point(481, 118);
             this.AuthorTextBox.Name = "AuthorTextBox";
             this.AuthorTextBox.ReadOnly = true;
             this.AuthorTextBox.Size = new System.Drawing.Size(473, 13);
@@ -161,7 +163,7 @@
             // ContentTextBox
             // 
             this.ContentTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ContentTextBox.Location = new System.Drawing.Point(483, 119);
+            this.ContentTextBox.Location = new System.Drawing.Point(481, 145);
             this.ContentTextBox.Multiline = true;
             this.ContentTextBox.Name = "ContentTextBox";
             this.ContentTextBox.ReadOnly = true;
@@ -186,11 +188,31 @@
             this.SearchResultsLabel.TabIndex = 13;
             this.SearchResultsLabel.Text = "Search results";
             // 
+            // StemmedLabel
+            // 
+            this.StemmedLabel.AutoSize = true;
+            this.StemmedLabel.Location = new System.Drawing.Point(399, 40);
+            this.StemmedLabel.Name = "StemmedLabel";
+            this.StemmedLabel.Size = new System.Drawing.Size(77, 13);
+            this.StemmedLabel.TabIndex = 14;
+            this.StemmedLabel.Text = "Stemmed word";
+            // 
+            // StemmedTextBox
+            // 
+            this.StemmedTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.StemmedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.StemmedTextBox.Location = new System.Drawing.Point(481, 40);
+            this.StemmedTextBox.Name = "StemmedTextBox";
+            this.StemmedTextBox.Size = new System.Drawing.Size(473, 13);
+            this.StemmedTextBox.TabIndex = 15;
+            // 
             // SearcherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1063, 459);
+            this.Controls.Add(this.StemmedTextBox);
+            this.Controls.Add(this.StemmedLabel);
             this.Controls.Add(this.SearchResultsLabel);
             this.Controls.Add(this.SearchLabel);
             this.Controls.Add(this.ContentTextBox);
@@ -205,6 +227,7 @@
             this.Controls.Add(this.SearchResultListView);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.SearchBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SearcherForm";
             this.Text = "Searcher Application";
             this.statusStrip1.ResumeLayout(false);
@@ -231,6 +254,8 @@
         private System.Windows.Forms.TextBox ContentTextBox;
         private System.Windows.Forms.Label SearchLabel;
         private System.Windows.Forms.Label SearchResultsLabel;
+        private System.Windows.Forms.Label StemmedLabel;
+        private System.Windows.Forms.TextBox StemmedTextBox;
     }
 }
 
