@@ -20,5 +20,6 @@ namespace searchDB_CS_GUI
         public String title { get; set; }
         public String shortTitle { get; set; }
         public String topics { get; set; }
+        public String place { get; set; }
     }
 }

@@ -47,6 +47,8 @@
             this.StemmedTextBox = new System.Windows.Forms.TextBox();
             this.TopicsLabel = new System.Windows.Forms.Label();
             this.TopicsTextBox = new System.Windows.Forms.TextBox();
+            this.PlaceLabel = new System.Windows.Forms.Label();
+            this.PlaceTextBox = new System.Windows.Forms.TextBox();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,7 +77,7 @@
             this.SearchResultListView.Location = new System.Drawing.Point(52, 89);
             this.SearchResultListView.MultiSelect = false;
             this.SearchResultListView.Name = "SearchResultListView";
-            this.SearchResultListView.Size = new System.Drawing.Size(325, 296);
+            this.SearchResultListView.Size = new System.Drawing.Size(325, 345);
             this.SearchResultListView.TabIndex = 2;
             this.SearchResultListView.TileSize = new System.Drawing.Size(300, 30);
             this.SearchResultListView.UseCompatibleStateImageBehavior = false;
@@ -88,7 +90,7 @@
             this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 437);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1063, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(972, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -128,7 +130,7 @@
             // ContentLabel
             // 
             this.ContentLabel.AutoSize = true;
-            this.ContentLabel.Location = new System.Drawing.Point(399, 170);
+            this.ContentLabel.Location = new System.Drawing.Point(399, 194);
             this.ContentLabel.Name = "ContentLabel";
             this.ContentLabel.Size = new System.Drawing.Size(44, 13);
             this.ContentLabel.TabIndex = 7;
@@ -164,7 +166,7 @@
             // ContentTextBox
             // 
             this.ContentTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ContentTextBox.Location = new System.Drawing.Point(481, 170);
+            this.ContentTextBox.Location = new System.Drawing.Point(481, 194);
             this.ContentTextBox.Multiline = true;
             this.ContentTextBox.Name = "ContentTextBox";
             this.ContentTextBox.ReadOnly = true;
@@ -227,11 +229,31 @@
             this.TopicsTextBox.Size = new System.Drawing.Size(473, 13);
             this.TopicsTextBox.TabIndex = 17;
             // 
+            // PlaceLabel
+            // 
+            this.PlaceLabel.AutoSize = true;
+            this.PlaceLabel.Location = new System.Drawing.Point(399, 169);
+            this.PlaceLabel.Name = "PlaceLabel";
+            this.PlaceLabel.Size = new System.Drawing.Size(34, 13);
+            this.PlaceLabel.TabIndex = 18;
+            this.PlaceLabel.Text = "Place";
+            // 
+            // PlaceTextBox
+            // 
+            this.PlaceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PlaceTextBox.Location = new System.Drawing.Point(481, 169);
+            this.PlaceTextBox.Name = "PlaceTextBox";
+            this.PlaceTextBox.ReadOnly = true;
+            this.PlaceTextBox.Size = new System.Drawing.Size(473, 13);
+            this.PlaceTextBox.TabIndex = 19;
+            // 
             // SearcherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1063, 459);
+            this.ClientSize = new System.Drawing.Size(972, 459);
+            this.Controls.Add(this.PlaceTextBox);
+            this.Controls.Add(this.PlaceLabel);
             this.Controls.Add(this.TopicsTextBox);
             this.Controls.Add(this.TopicsLabel);
             this.Controls.Add(this.StemmedTextBox);
@@ -281,6 +303,8 @@
         private System.Windows.Forms.TextBox StemmedTextBox;
         private System.Windows.Forms.Label TopicsLabel;
         private System.Windows.Forms.TextBox TopicsTextBox;
+        private System.Windows.Forms.Label PlaceLabel;
+        private System.Windows.Forms.TextBox PlaceTextBox;
     }
 }
 
