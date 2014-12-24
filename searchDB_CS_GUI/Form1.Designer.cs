@@ -45,6 +45,8 @@
             this.SearchResultsLabel = new System.Windows.Forms.Label();
             this.StemmedLabel = new System.Windows.Forms.Label();
             this.StemmedTextBox = new System.Windows.Forms.TextBox();
+            this.TopicsLabel = new System.Windows.Forms.Label();
+            this.TopicsTextBox = new System.Windows.Forms.TextBox();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,8 +71,7 @@
             // 
             // SearchResultListView
             // 
-            this.SearchResultListView.BackColor = System.Drawing.SystemColors.Window;
-            this.SearchResultListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SearchResultListView.BackColor = System.Drawing.SystemColors.Control;
             this.SearchResultListView.Location = new System.Drawing.Point(52, 89);
             this.SearchResultListView.MultiSelect = false;
             this.SearchResultListView.Name = "SearchResultListView";
@@ -127,7 +128,7 @@
             // ContentLabel
             // 
             this.ContentLabel.AutoSize = true;
-            this.ContentLabel.Location = new System.Drawing.Point(399, 145);
+            this.ContentLabel.Location = new System.Drawing.Point(399, 170);
             this.ContentLabel.Name = "ContentLabel";
             this.ContentLabel.Size = new System.Drawing.Size(44, 13);
             this.ContentLabel.TabIndex = 7;
@@ -163,7 +164,7 @@
             // ContentTextBox
             // 
             this.ContentTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ContentTextBox.Location = new System.Drawing.Point(481, 145);
+            this.ContentTextBox.Location = new System.Drawing.Point(481, 170);
             this.ContentTextBox.Multiline = true;
             this.ContentTextBox.Name = "ContentTextBox";
             this.ContentTextBox.ReadOnly = true;
@@ -203,14 +204,36 @@
             this.StemmedTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.StemmedTextBox.Location = new System.Drawing.Point(481, 40);
             this.StemmedTextBox.Name = "StemmedTextBox";
+            this.StemmedTextBox.ReadOnly = true;
             this.StemmedTextBox.Size = new System.Drawing.Size(473, 13);
             this.StemmedTextBox.TabIndex = 15;
+            // 
+            // TopicsLabel
+            // 
+            this.TopicsLabel.AutoSize = true;
+            this.TopicsLabel.Location = new System.Drawing.Point(398, 144);
+            this.TopicsLabel.Name = "TopicsLabel";
+            this.TopicsLabel.Size = new System.Drawing.Size(39, 13);
+            this.TopicsLabel.TabIndex = 16;
+            this.TopicsLabel.Text = "Topics";
+            // 
+            // TopicsTextBox
+            // 
+            this.TopicsTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.TopicsTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TopicsTextBox.Location = new System.Drawing.Point(481, 144);
+            this.TopicsTextBox.Name = "TopicsTextBox";
+            this.TopicsTextBox.ReadOnly = true;
+            this.TopicsTextBox.Size = new System.Drawing.Size(473, 13);
+            this.TopicsTextBox.TabIndex = 17;
             // 
             // SearcherForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1063, 459);
+            this.Controls.Add(this.TopicsTextBox);
+            this.Controls.Add(this.TopicsLabel);
             this.Controls.Add(this.StemmedTextBox);
             this.Controls.Add(this.StemmedLabel);
             this.Controls.Add(this.SearchResultsLabel);
@@ -256,6 +279,8 @@
         private System.Windows.Forms.Label SearchResultsLabel;
         private System.Windows.Forms.Label StemmedLabel;
         private System.Windows.Forms.TextBox StemmedTextBox;
+        private System.Windows.Forms.Label TopicsLabel;
+        private System.Windows.Forms.TextBox TopicsTextBox;
     }
 }
 

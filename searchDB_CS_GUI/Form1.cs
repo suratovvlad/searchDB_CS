@@ -29,6 +29,7 @@ namespace searchDB_CS_GUI
             AuthorTextBox.Text = "";
             ContentTextBox.Text = "";
             StemmedTextBox.Text = "";
+            TopicsTextBox.Text = "";
 
             string connetionString = null;
             SqlConnection connection;
@@ -108,7 +109,7 @@ namespace searchDB_CS_GUI
                 {
                     command.Parameters.Clear();
                     command = new SqlCommand(
-                        @"SELECT docs.Doc_Title, docs.Doc_Date, docs.Doc_Author, docs.short_title, docs.Doc_Body
+                        @"SELECT docs.Doc_Title, docs.Doc_Date, docs.Doc_Author, docs.short_title, docs.Doc_Body, docs.Doc_Topics
 					        FROM [dbo].[search_Documents] docs
 					        WHERE docs.Doc_ID = @DOCID;"
                         , connection);
@@ -124,7 +125,7 @@ namespace searchDB_CS_GUI
                             doc.author = reader[2].ToString();
                             doc.shortTitle = reader[3].ToString();
                             doc.body = reader[4].ToString();
-
+                            doc.topics = reader[5].ToString();
                         }
                     }
                     finally
@@ -167,6 +168,7 @@ namespace searchDB_CS_GUI
             DateTextBox.Text = doc.date;
             AuthorTextBox.Text = doc.author;
             ContentTextBox.Text = doc.body;
+            TopicsTextBox.Text = doc.topics;
         }
     }
 }
