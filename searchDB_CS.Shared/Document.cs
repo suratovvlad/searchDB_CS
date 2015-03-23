@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace searchDB_CS_GUI
+namespace Shared
 {
-    class Document
+    public class Document
     {
         public Document(String _id)
         {

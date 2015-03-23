@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace searchDB_CS_GUI
+namespace Shared
 {
-    class Stemmer
+    public class Stemmer
     {
         private char[] b;
         private int i,     /* offset into b */

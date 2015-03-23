@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+using Shared;
+
 namespace searchDB_CS_GUI
 {
     public partial class SearcherForm : Form
