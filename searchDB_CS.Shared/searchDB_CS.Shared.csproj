@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Document.cs" />
+    <Compile Include="DocumentEqualityComparer.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="ITreeNode.cs" />
     <Compile Include="ITreeNodeAware.cs" />
